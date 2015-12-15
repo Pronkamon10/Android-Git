@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/scenc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/scenc" />
+
+    <ImageView
+        android:id="@+id/box3"
+        android:layout_width="1060dp"
+        android:layout_height="700dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/box3" />
+
+
+    <ImageView
+        android:id="@+id/book3"
+        android:layout_width="wrap_content"
+        android:layout_height="675dp"
+        android:background="@drawable/book3" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/button_back" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button1"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/button_next" />
+
+    <ImageView
+        android:id="@+id/trees"
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/trees" />
+
+    <ImageView
+        android:id="@+id/trees1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="400dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/trees1" />
+
+    <ImageView
+        android:id="@+id/sungthong"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="400dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/sungthong" />
+
+    <ImageView
+        android:id="@+id/chicken1"
+        android:layout_width="230dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="450dp"
+        android:background="@drawable/animate_chicken" />
+
+    <ImageView
+        android:id="@+id/home1"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="630dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/animate_home" />
+
+
+</RelativeLayout>
