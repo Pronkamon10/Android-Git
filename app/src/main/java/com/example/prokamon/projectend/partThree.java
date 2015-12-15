@@ -39,6 +39,7 @@ public class partThree extends AppCompatActivity {
                     //change image view
                     chicken1.setBackgroundResource(R.drawable.oldwomen);
                 } catch (Exception e) {
+                    
                 }
             }
         });
