@@ -19,7 +19,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView box, book1, curtains, curtains1, curtains2, chair, word1, word2, word3;
+    ImageView box, book1,chair, word1, word2, word3;
     Button btn_rigth;
     ImageView jantawee1, janta1, yotsawimon1;
 
@@ -30,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         box = (ImageView) findViewById(R.id.box);
         book1 = (ImageView) findViewById(R.id.book1);
-        curtains = (ImageView) findViewById(R.id.curtains);
-        curtains1 = (ImageView) findViewById(R.id.curtains1);
-        curtains2 = (ImageView) findViewById(R.id.curtains2);
         jantawee1 = (ImageView) findViewById(R.id.jantawee1);
         janta1 = (ImageView) findViewById(R.id.janta1);
         chair = (ImageView) findViewById(R.id.chair);
@@ -89,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(i);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_in_left);
             }
         });
     }
@@ -100,5 +98,8 @@ public class MainActivity extends AppCompatActivity {
         System.runFinalization();
         Runtime.getRuntime().gc();
         System.gc();
+        ((AnimationDrawable) jantawee1.getBackground()).start();
+        ((AnimationDrawable) janta1.getBackground()).start();
+        ((AnimationDrawable) yotsawimon1.getBackground()).start();
     }
 }
