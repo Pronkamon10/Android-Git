@@ -2,6 +2,7 @@ package com.example.prokamon.projectend;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,9 +17,10 @@ import com.daimajia.androidanimations.library.YoYo;
  * Created by Prokamon on 10/12/2558.
  */
 public class partTwo extends AppCompatActivity {
-    ImageView box2, book2, trees, trees1,word4;
-    ImageView jantawee3,oldmen1,oldwomen1;
+    ImageView box2, book2, trees, trees1, word4;
+    ImageView jantawee3, oldmen1, oldwomen1;
     Button btn_left, btn_right;
+    MediaPlayer mediaPlayer;
 
 
     @Override
@@ -30,8 +32,8 @@ public class partTwo extends AppCompatActivity {
         book2 = (ImageView) findViewById(R.id.book2);
         trees = (ImageView) findViewById(R.id.trees);
         trees1 = (ImageView) findViewById(R.id.trees1);
-        jantawee3 = (ImageView)findViewById(R.id.jantawee3);
-        word4 = (ImageView)findViewById(R.id.word4);
+        jantawee3 = (ImageView) findViewById(R.id.jantawee3);
+        word4 = (ImageView) findViewById(R.id.word4);
 
         oldmen1 = (ImageView) findViewById(R.id.oldmen1);
         ((AnimationDrawable) oldmen1.getBackground()).start();
@@ -41,7 +43,7 @@ public class partTwo extends AppCompatActivity {
                 try {
                     ((AnimationDrawable) oldmen1.getBackground()).stop();
                     //change image view
-                   oldmen1.setBackgroundResource(R.drawable.oldmen);
+                    oldmen1.setBackgroundResource(R.drawable.oldmen);
                 } catch (Exception e) {
                 }
             }
@@ -56,6 +58,8 @@ public class partTwo extends AppCompatActivity {
                     //change image view
                     oldwomen1.setBackgroundResource(R.drawable.oldwomen);
                     word4.setVisibility(View.VISIBLE);
+                    mediaPlayer = MediaPlayer.create(partTwo.this, R.raw.sound4);
+                    mediaPlayer.start();
                 } catch (Exception e) {
                 }
             }

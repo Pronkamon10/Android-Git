@@ -1,12 +1,16 @@
 package com.example.prokamon.projectend;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.TransitionDrawable;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -17,16 +21,21 @@ import com.nineoldandroids.animation.Animator;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView box, book1,chair, word1, word2, word3;
+    ImageView box, book1, chair, word1, word2, word3;
     Button btn_rigth;
     ImageView jantawee1, janta1, yotsawimon1;
+    private Button button2;
+    private Button button1;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.button2 = (Button) findViewById(R.id.button2);
+        this.button1 = (Button) findViewById(R.id.button1);
 
         box = (ImageView) findViewById(R.id.box);
         book1 = (ImageView) findViewById(R.id.book1);
@@ -37,58 +46,62 @@ public class MainActivity extends AppCompatActivity {
         word1 = (ImageView) findViewById(R.id.word1);
         word2 = (ImageView) findViewById(R.id.word2);
         word3 = (ImageView) findViewById(R.id.word3);
-        btn_rigth = (Button) findViewById(R.id.button);
+        btn_rigth = (Button) findViewById(R.id.button2);
 
         ((AnimationDrawable) jantawee1.getBackground()).start();
-        jantawee1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        ((AnimationDrawable) janta1.getBackground()).start();
+        ((AnimationDrawable) yotsawimon1.getBackground()).start();
+        jantawee1.setOnClickListener(this);
+        janta1.setOnClickListener(this);
+        yotsawimon1.setOnClickListener(this);
+        btn_rigth.setOnClickListener(this);
+
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.jantawee1:
                 try {
                     ((AnimationDrawable) jantawee1.getBackground()).stop();
                     //change image view
                     jantawee1.setBackgroundResource(R.drawable.jantawee);
                     word1.setVisibility(View.VISIBLE);
+                    mediaPlayer = MediaPlayer.create(this, R.raw.sound1);
+                    mediaPlayer.start();
                 } catch (Exception e) {
                 }
-            }
-        });
-
-        ((AnimationDrawable) janta1.getBackground()).start();
-        janta1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.janta1:
                 try {
                     ((AnimationDrawable) janta1.getBackground()).stop();
                     //change image view
                     janta1.setBackgroundResource(R.drawable.janta);
                     word2.setVisibility(View.VISIBLE);
+                    mediaPlayer = MediaPlayer.create(this, R.raw.sound2);
+                    mediaPlayer.start();
                 } catch (Exception e) {
                 }
-            }
-        });
-
-        ((AnimationDrawable) yotsawimon1.getBackground()).start();
-        yotsawimon1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.yotsawimon1:
                 try {
                     ((AnimationDrawable) yotsawimon1.getBackground()).stop();
                     //change image view
                     yotsawimon1.setBackgroundResource(R.drawable.yotsawimon);
                     word3.setVisibility(View.VISIBLE);
+                    mediaPlayer = MediaPlayer.create(this, R.raw.sound3);
+                    mediaPlayer.start();
                 } catch (Exception e) {
                 }
-            }
-        });
-
-        final Intent i = new Intent(this, partTwo.class);
-        btn_rigth.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.button2:
+                final Intent i = new Intent(this, partTwo.class);
                 startActivity(i);
-                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_in_left);
-            }
-        });
+                break;
+        }
     }
 
     @Override
@@ -98,8 +111,31 @@ public class MainActivity extends AppCompatActivity {
         System.runFinalization();
         Runtime.getRuntime().gc();
         System.gc();
-        ((AnimationDrawable) jantawee1.getBackground()).start();
-        ((AnimationDrawable) janta1.getBackground()).start();
-        ((AnimationDrawable) yotsawimon1.getBackground()).start();
+
+        try {
+            ((AnimationDrawable) jantawee1.getBackground()).stop();
+            ((AnimationDrawable) janta1.getBackground()).stop();
+            ((AnimationDrawable) yotsawimon1.getBackground()).stop();
+        } catch (Exception e) {
+
+        }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        System.runFinalization();
+        Runtime.getRuntime().gc();
+        System.gc();
+
+        try {
+            ((AnimationDrawable) jantawee1.getBackground()).stop();
+            ((AnimationDrawable) janta1.getBackground()).stop();
+            ((AnimationDrawable) yotsawimon1.getBackground()).stop();
+        } catch (Exception e) {
+
+        }
+    }
+
 }

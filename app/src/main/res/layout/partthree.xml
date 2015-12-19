@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/scenc"
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/scenc"
+<ImageView
+        android:id="@+id/scen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/scenc" />
+        android:layout_centerVertical="true" />
 
     <ImageView
         android:id="@+id/box3"
@@ -24,8 +26,8 @@
 
     <ImageView
         android:id="@+id/book3"
-        android:layout_width="wrap_content"
-        android:layout_height="675dp"
+        android:layout_width="1280dp"
+        android:layout_height="680dp"
         android:background="@drawable/book3" />
 
     <Button
@@ -53,7 +55,7 @@
         android:layout_width="300dp"
         android:layout_height="280dp"
         android:layout_marginLeft="250dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/trees" />
 
     <ImageView
@@ -86,7 +88,44 @@
         android:layout_height="400dp"
         android:layout_marginLeft="630dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/animate_home" />
+        android:background="@drawable/home1" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="170dp"
+        android:layout_alignBottom="@+id/mushroom"
+        android:layout_marginLeft="900dp"
+        android:background="@drawable/grass" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:id="@+id/mushroom"
+        android:layout_marginLeft="1000dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/mushroom"
+        android:longClickable="true" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/grass" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="280dp"
+        android:background="@drawable/stone" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/trees"
+        android:layout_marginLeft="900dp"
+        android:background="@drawable/stone" />
 
 
 </RelativeLayout>

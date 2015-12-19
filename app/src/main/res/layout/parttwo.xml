@@ -17,42 +17,42 @@
         android:id="@+id/box2"
         android:layout_width="1200dp"
         android:layout_height="700dp"
-        android:background="@drawable/box2"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/box2" />
 
     <ImageView
         android:id="@+id/book2"
-        android:layout_width="wrap_content"
-        android:layout_height="675dp"
+        android:layout_width="1280dp"
+        android:layout_height="680dp"
         android:layout_alignParentTop="true"
         android:background="@drawable/book2" />
 
     <ImageView
-    android:layout_width="400dp"
-    android:layout_height="350dp"
-    android:id="@+id/trees"
-    android:layout_marginLeft="250dp"
-    android:layout_marginTop="40dp"
-    android:background="@drawable/trees" />
+        android:id="@+id/trees"
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/trees" />
 
     <ImageView
-    android:layout_width="400dp"
-    android:layout_height="350dp"
-    android:id="@+id/trees1"
-    android:layout_marginLeft="660dp"
-    android:layout_marginTop="50dp"
-    android:background="@drawable/trees1" />
+        android:id="@+id/trees1"
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="660dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/trees1" />
 
     <ImageView
-    android:layout_width="250dp"
-    android:layout_height="400dp"
-    android:layout_marginLeft="150dp"
-    android:layout_marginTop="190dp"
-    android:id="@+id/jantawee3"
-    android:background="@drawable/jantawee3" />
+        android:id="@+id/jantawee3"
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/jantawee3" />
 
     <Button
         android:id="@+id/button1"
@@ -71,33 +71,33 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="10dp"
-        android:layout_marginRight="50dp"
         android:layout_marginLeft="1120dp"
+        android:layout_marginRight="50dp"
         android:background="@drawable/button_r_a" />
 
     <ImageView
+        android:id="@+id/oldmen1"
         android:layout_width="600dp"
         android:layout_height="400dp"
-        android:id="@+id/oldmen1"
-        android:layout_marginTop="180dp"
         android:layout_marginLeft="300dp"
-        android:background="@drawable/animate_oldmen"/>
+        android:layout_marginTop="180dp"
+        android:background="@drawable/animate_oldmen" />
 
     <ImageView
+        android:id="@+id/oldwomen1"
         android:layout_width="250dp"
         android:layout_height="400dp"
-        android:id="@+id/oldwomen1"
-        android:layout_marginTop="200dp"
         android:layout_marginLeft="800dp"
-        android:background="@drawable/animate_oldwomen"/>
+        android:layout_marginTop="200dp"
+        android:background="@drawable/animate_oldwomen" />
 
     <ImageView
         android:id="@+id/word4"
-        android:layout_width="350dp"
-        android:layout_height="300dp"
-        android:layout_marginLeft="950dp"
-        android:visibility="gone"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="755dp"
         android:src="@drawable/word4"
-        />
+        android:visibility="gone" />
 
 </RelativeLayout>
